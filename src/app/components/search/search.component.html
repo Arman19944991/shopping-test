@@ -1,0 +1,14 @@
+<div class="search">
+    <input class="search__inp" type="search" [(ngModel)]="product" placeholder="Search">
+    <div class="search__lsit" *ngIf="product">
+        <div class="search__lsit-item" *ngFor="let item of (productsData | search: product)"
+            [routerLink]="'/shopping/shopping-product-detail/'+item.id" (click)="product = null">
+            <div>
+                {{item.sku}}
+            </div>
+            <div>
+                {{item.price}}$
+            </div>
+        </div>
+    </div>
+</div>

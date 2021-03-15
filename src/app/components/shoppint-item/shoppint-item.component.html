@@ -1,0 +1,9 @@
+<div class="product" *ngIf="productData">
+    <div class="product__image" [routerLink]="'/shopping/shopping-product-detail/'+productData.id">
+        <img class="product__img" [src]="productData?.base_image.url" [alt]="productData?.base_image.alt">
+    </div>
+    <div class="product__item">
+        <div class="product__sku" [routerLink]="'/shopping/shopping-product-detail/'+productData.id">{{productData?.sku}}</div>
+        <div class="product__price">{{productData?.price}}$</div>
+    </div>
+</div>

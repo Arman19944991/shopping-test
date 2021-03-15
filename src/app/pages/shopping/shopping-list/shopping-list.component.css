@@ -1,0 +1,41 @@
+.shopping-list{
+    position: relative;
+}
+
+.shopping-list__title{
+    color: #2d2d2d;
+    text-align: center;
+}
+
+.shopin-list__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.shopin-list__item{
+    width: 24%;
+    margin-bottom: 16px;
+}
+
+.shopping-list__sort{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    color: #2d2d2d;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shopping-list__sort div{
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 12px;
+}
+
+.active{
+    color: #9e2c2c;
+}

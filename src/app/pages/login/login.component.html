@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="login">
+        <form action="" class="login-form"  [formGroup]="loginForm" novalidate>
+            <h1 class="login-form__title">
+                Login to shop
+            </h1>
+            <div class="login-form__item">
+                <label class="login-form__label">Email</label>
+                <input type="text" class="login-form__inp" formControlName="email">
+                <p class="err-msg" *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.touched">
+                    Invalid email address.
+                </p>
+            </div>
+            <div class="login-form__item">
+                <label class="login-form__labels">Password</label>
+                <input type="password" class="login-form__inp" formControlName="password">
+                <p class="err-msg" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.touched">
+                    Minimum six characters, at least one letter and one number.
+                </p>
+            </div>
+            <div class="login-form__item">
+                <button class="login-form__button"  (click)="login()">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

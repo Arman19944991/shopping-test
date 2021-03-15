@@ -1,0 +1,9 @@
+<div class="slider" *ngIf="slideData">
+    <div class="slider__item" *ngFor="let item of slideData;let i = index">
+        <img class="slider__img" [src]="item.url" [alt]="item.alt">
+    </div>
+</div>
+<div class="slider__buttons">
+    <button class="slider__prev" (click)="prev()" [disabled]="sliderCount == 0">Prev</button>
+    <button class="slider__next" (click)="next()" [disabled]="sliderCount == slideData.length-1">Next</button>
+</div>

@@ -1,0 +1,23 @@
+<div class="product">
+    <div class="container" *ngIf="productData">
+        <h1 class="product__title">Product Detail</h1>
+        <div class="slider">
+            <app-slider [slideData]="productData.images"></app-slider>
+        </div>
+        <div class="product__info">
+          <div class="product__sku">SKU: {{productData.sku}}</div>
+      </div>
+        <div class="product__info">
+            <div class="product__qty">Qunatity: {{productData.qty}}</div>
+            <div class="product__price">Price: {{productData.price}}$</div>
+        </div>
+        <div class="product__info">
+          <div class="product__counter">
+            <div class="minus" (click)="counter('minus')">-</div>
+            <div  class="qty">{{productQty}}</div>
+            <div class="plus" (click)="counter('plus')">+</div>
+          </div>
+          <div class="product__total-price">Total: {{productQty*productData.price}}$</div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.footer{
+    padding: 16px 0;
+    background-color: #9e2c2c;
+}
+
+.footer__item{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+.smile{
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-left: 12px;
+}

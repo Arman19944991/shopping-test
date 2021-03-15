@@ -1,0 +1,14 @@
+<div class="shopping-list">
+    <div class="container">
+        <h1 class="shopping-list__title">Shopping List</h1>
+        <div class="shopping-list__sort">
+            <div (click)="sortData('price')" [class]="sortKey == 'price'? 'active': ''">Sort by price</div>
+            <div (click)="sortData('sku')" [class]="sortKey == 'sku'? 'active': ''">Sort by sku</div>
+        </div>
+        <div class="shopin-list__items" *ngIf="productsData" #listBlock (scroll)="onBlockScroll($event)">
+            <div class="shopin-list__item" *ngFor="let item of (productsData  | sort: sortKey: sortType)">
+                <app-shoppint-item [productData]="item"></app-shoppint-item>
+            </div>
+        </div>
+    </div>
+</div>
